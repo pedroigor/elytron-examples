@@ -5,6 +5,16 @@
    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
    metadata-complete="false">
 
+    <filter>
+        <filter-name>PolicyEnforcerFilter</filter-name>
+        <filter-class>org.wildfly.security.examples.PolicyEnforcerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>PolicyEnforcerFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>secured</web-resource-name>
